@@ -12,6 +12,7 @@ function Register() {
     const [password, setPassword] = useState('')
     const [err, setError] = useState('')
     const [message, setMessage] = useState('')
+    axios.defaults.withCredentials=true
     
     const handleSubmit = (e) => {
         

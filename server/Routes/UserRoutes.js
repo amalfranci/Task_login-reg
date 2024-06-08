@@ -63,7 +63,7 @@ router.post('/login', async (req, res) => {
         
         const token =  jwt.sign({ username: user.username }, "jwttokenkey", { expiresIn: '1h' })
 
-    
+      console.log("token",token)
         
       res.cookie("access_token", token, {  maxAge:360000 });
        console.log('Cookie set: ', res.getHeader('Set-Cookie'));
